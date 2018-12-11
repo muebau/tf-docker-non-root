@@ -2,6 +2,12 @@ FROM tensorflow/tensorflow:latest-gpu
 
 RUN chmod 777 /notebooks
 
+RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
+    python3 get-pip.py && \
+    rm get-pip.py && \
+    python3 -m pip install ipykernel && \
+    python3 -m ipykernel install --user
+
 # TensorBoard
 EXPOSE 6006
 # IPython
