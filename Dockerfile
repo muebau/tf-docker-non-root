@@ -2,7 +2,7 @@ FROM tensorflow/tensorflow:latest-gpu
 
 RUN chmod 777 /notebooks
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y \
         r-base \
         libssl-dev \
         libgit2-dev \
