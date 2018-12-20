@@ -4,7 +4,9 @@ RUN chmod 777 /notebooks
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         r-base \
-        r-cran-devtools \
+        libssl-dev \
+        libgit2-dev \
+        libcurl4-openssl-dev \
         socat \
         netcat \
         vim \
