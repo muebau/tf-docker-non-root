@@ -4,6 +4,7 @@ RUN chmod 777 /notebooks
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         r-base \
+        r-cran-devtools \
         socat \
         netcat \
         vim \
