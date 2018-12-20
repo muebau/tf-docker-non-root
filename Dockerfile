@@ -2,24 +2,25 @@ FROM tensorflow/tensorflow:latest-gpu
 
 RUN chmod 777 /notebooks
 
-RUN apt-get update && apt-get install -y \
-        r-base \
-        libssl-dev \
-        libgit2-dev \
-        libcurl4-openssl-dev \
-        socat \
-        netcat \
-        vim \
-        libpng-dev \
-        libzmq3-dev \
-        pkg-config \
-        python \
-        python-dev \
-        rsync \
-        software-properties-common \
-        unzip \
-        && \
-    apt-get clean && \
+RUN apt-get update
+
+RUN apt-get install -y r-base
+RUN apt-get install -y libssl-dev
+RUN apt-get install -y libgit2-dev
+RUN apt-get install -y libcurl4-openssl-dev
+RUN apt-get install -y socat
+RUN apt-get install -y netcat
+RUN apt-get install -y vim
+RUN apt-get install -y libpng-dev
+RUN apt-get install -y libzmq3-dev
+RUN apt-get install -y pkg-config
+RUN apt-get install -y python
+RUN apt-get install -y python-dev
+RUN apt-get install -y rsync
+RUN apt-get install -y software-properties-common
+RUN apt-get install -y unzip
+
+RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
