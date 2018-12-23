@@ -11,7 +11,7 @@ RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
-
+ENV R_LIBS_USER="~/.local/R_libs/"
 
 RUN apt-get install -y gnupg2
 RUN apt-get install -y apt-transport-https
@@ -25,6 +25,8 @@ RUN apt-get install -y libssl-dev
 RUN apt-get install -y libgit2-dev
 RUN apt-get install -y libcurl4-openssl-dev
 RUN apt-get install -y libxml2-dev
+RUN apt-get install -y python3-dev
+RUN apt-get install -y python-dev
 RUN apt-get install -y git
 RUN apt-get install -y build-essential
 RUN apt-get install -y socat
